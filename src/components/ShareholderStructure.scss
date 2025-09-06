@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.shareholder-structure {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0px 4px 12px 0px #1723390f;
+    box-sizing: border-box;
+
+    h2 {
+        font-weight: 600;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: normal;
+        vertical-align: middle;
+        color: #172339;
+        margin: 0;
+    }
+
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: auto 610px;
+        gap: 32px;
+        align-items: start;
+    }
+
+    hr {
+        border: 1px solid #17233929;
+        opacity: 1;
+        border-width: 1px;
+        margin: 0;
+        display: none;
+    }
+
+    @media (max-width: 1440px) {
+        .content-wrapper {
+            grid-template-columns: 54fr 46fr;
+        }
+    }
+    @media (max-width: 1024px) {
+        text-align: center;
+
+        .content-wrapper {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 8.5px;
+        text-align: start;
+        gap: 14px;
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .content-wrapper {
+            margin: 0 auto;
+            gap: 15px;
+        }
+
+        hr {
+            display: block;
+        }
+
+        .table-container .update-date {
+            margin-top: 12px
+        }
+    }
+}

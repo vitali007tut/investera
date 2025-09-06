@@ -1,0 +1,52 @@
+{
+  "SBER": [
+    {
+      "holder": "Группа ИнтерРАО",
+      "share_percent": "50.000"
+    },
+    {
+      "holder": "Группа ИнтерРАО",
+      "share_percent": "50.000"
+    },
+    {
+      "holder": "Free Float",
+      "share_percent": "33.000"
+    },
+    {
+      "holder": "Free Float",
+      "share_percent": "33.000"
+    },
+    {
+      "holder": "Роснефтегаз",
+      "share_percent": "6.360"
+    },
+    {
+      "holder": "Роснефтегаз",
+      "share_percent": "6.360"
+    },
+    {
+      "holder": "ФСК ЕЭС",
+      "share_percent": "6.240"
+    },
+    {
+      "holder": "ФСК ЕЭС",
+      "share_percent": "6.240"
+    },
+    {
+      "holder": "Физ.лица резиденты",
+      "share_percent": "2.900"
+    },
+    {
+      "holder": "Физ.лица резиденты",
+      "share_percent": "2.900"
+    },
+    {
+      "holder": "Юр.лица резиденты",
+      "share_percent": "1.500"
+    },
+    {
+      "holder": "Юр.лица резиденты",
+      "share_percent": "1.500"
+    }
+  ]
+}

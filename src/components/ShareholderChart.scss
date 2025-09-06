@@ -1,0 +1,214 @@
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+// .chart-wrapper {
+//     width: 100%;
+//     border: 1px solid #17233929;
+//     padding: 23px 32px;
+//     border-radius: 16px;
+//     display: flex;
+//     gap: 24px;
+//     box-sizing: border-box;
+// }
+
+// .custom-tooltip {
+//     background: #ffffff;
+//     border-radius: 8px;
+//     padding: 8px 12px;
+//     border: 1px solid #e0e0e0;
+//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+//     font-family: Montserrat;
+
+//     .tooltip-holder {
+//         color: #333333;
+//         font-size: 14px;
+//         font-weight: 400;
+//         margin: 0 0 4px 0;
+//         line-height: 1.4;
+//     }
+
+//     .tooltip-percent {
+//         color: #333333;
+//         font-size: 14px;
+//         font-weight: 600;
+//         margin: 0;
+//     }
+// }
+
+// .custom-legend {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 0px 5px;
+//     width: 217px;
+//     box-sizing: border-box;
+//     padding-top: 5px;
+//     gap: 17px;
+
+//     .legend-item {
+//         border-bottom: 1px solid #17233929;
+//         display: flex;
+//         align-items: center;
+//         padding-bottom: 10px;
+
+//         .legend-color {
+//             width: 11px;
+//             height: 11px;
+//             border-radius: 50%;
+//             flex-shrink: 0;
+//             margin-left: 13px;
+//             margin-top: -1px;
+//         }
+
+//         .legend-text {
+//             font-family: Montserrat;
+//             font-weight: 400;
+//             font-size: 16px;
+//             line-height: 24px;
+//             letter-spacing: 0;
+//             padding-left: 19px;
+//         }
+//     }
+// }
+
+// @media (max-width: 1024px) {
+//     .chart-wrapper {
+//         max-width: 610px;
+//         margin: 0 auto;
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     .chart-wrapper {
+//         width: 100%;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .custom-legend {
+//         padding: 0;
+//         gap: 6px;
+
+//         .legend-item {
+//             padding: 3px 6px;
+
+//             .legend-color {
+//                 width: 6px;
+//                 height: 6px;
+//             }
+
+//             .legend-text {
+//                 font-size: 12px;
+//             }
+//         }
+//     }
+// }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.chart-wrapper {
+    width: 100%;
+    border: 1px solid #17233929;
+    padding: 23px 32px;
+    border-radius: 16px;
+    display: flex;
+    gap: 24px;
+    box-sizing: border-box;
+
+    .chart-container {
+        width: 301px;
+        height: 301px;
+        position: relative;
+
+        @media (max-width: 768px) {
+            width: 240px;
+            height: 240px;
+        }
+    }
+}
+
+.custom-tooltip {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: Montserrat;
+
+    .tooltip-holder {
+        color: #333333;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 0 4px 0;
+        line-height: 1.4;
+    }
+
+    .tooltip-percent {
+        color: #333333;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0;
+    }
+}
+
+.custom-legend {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px;
+    width: 217px;
+    box-sizing: border-box;
+    padding-top: 5px;
+    gap: 17px;
+
+    @media (max-width: 768px) {
+        width: 95%;
+    }
+
+    .legend-item {
+        border-bottom: 1px solid #17233929;
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+
+        .legend-color {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-left: 13px;
+            margin-top: -1px;
+        }
+
+        .legend-text {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0;
+            padding-left: 19px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .chart-wrapper {
+        max-width: 610px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-wrapper {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 21px;
+    }
+
+    .custom-legend {
+        padding: 0px 10px;
+        gap: 9px;
+
+        .legend-item .legend-text {
+            padding-left: 13px;
+        }
+    }
+}

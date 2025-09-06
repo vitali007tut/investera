@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.table-container {
+    width: 100%;
+    margin: 0 auto;
+
+    .update-date {
+        margin-top: 16px;
+        color: #6c757d;
+        font-weight: 400;
+        padding: 0px 16px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        vertical-align: middle;
+    }
+}
+
+.custom-table .ant-table-thead > tr > th {
+    font-family: Montserrat;
+    background-color: #172339;
+    color: #fff;
+    height: 64px;
+    text-align: left;
+    padding-left: 16px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: none;
+}
+
+.ant-table-tbody > tr > td {
+    border-bottom: none !important;
+    background-color: #1111120a;
+    border-top: 1px solid #17233914;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    height: 52px !important;
+    padding: 13px 16px !important;
+}
+
+.ant-table-cell::before {
+    display: none;
+}
+
+.ant-table-thead > tr > th:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ffffff14;
+}
+
+.ant-table-container {
+    border-start-end-radius: 12px !important;
+    border-start-start-radius: 12px !important;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.first-col {
+    font-weight: 600;
+    border-right: 1px solid #17233914;
+    width: 63%;
+}
+
+.second-col {
+    font-weight: 400;
+    border-right: 1px solid #17233914;
+}
+
+@media (max-width: 1200px) {
+    .first-col {
+        width: 75%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .table-container {
+        width: 64%;
+    }
+}
+
+@media (max-width: 768px) {
+    .first-col {
+        width: 64%;
+    }
+
+    .second-col {
+        border-right: none;
+    }
+
+    .table-container {
+        width: 100%;
+    }
+}
