@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@use '../styles/variables' as *;
+@use 'sass:map';
 
 .shareholder-structure {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    font-family: Montserrat;
+    font-family: $font-family;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -15,13 +16,14 @@
 
     h2 {
         font-weight: 600;
-        font-style: normal;
-        font-size: 22px;
+        font-size: map.get($font-sizes, xl);
         line-height: 30px;
-        letter-spacing: normal;
-        vertical-align: middle;
         color: #172339;
         margin: 0;
+
+        @media (max-width: 768px) {
+            font-size: map.get($font-sizes, large);
+        }
     }
 
     .content-wrapper {
@@ -29,50 +31,41 @@
         grid-template-columns: auto 610px;
         gap: 32px;
         align-items: start;
+
+        @media (max-width: 1440px) {
+            grid-template-columns: 54fr 46fr;
+        }
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            margin: 0 auto;
+            gap: 15px;
+        }
     }
 
     hr {
-        border: 1px solid #17233929;
+        border: 1px solid $border-color;
         opacity: 1;
         border-width: 1px;
         margin: 0;
         display: none;
-    }
 
-    @media (max-width: 1440px) {
-        .content-wrapper {
-            grid-template-columns: 54fr 46fr;
+        @media (max-width: 768px) {
+            display: block;
         }
     }
+
     @media (max-width: 1024px) {
         text-align: center;
-
-        .content-wrapper {
-            grid-template-columns: 1fr;
-            gap: 24px;
-        }
     }
 
     @media (max-width: 768px) {
         padding: 8.5px;
         text-align: start;
         gap: 14px;
-
-        h2 {
-            font-size: 18px;
-        }
-
-        .content-wrapper {
-            margin: 0 auto;
-            gap: 15px;
-        }
-
-        hr {
-            display: block;
-        }
-
-        .table-container .update-date {
-            margin-top: 12px
-        }
     }
 }

@@ -1,69 +1,52 @@
-# React + TypeScript + Vite
+# 📊 Структура акционеров — React + TypeScript + SCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Адаптивный компонент "Структура акционеров" с таблицей и графиком, реализованный по макету Figma.  
+> Демо: [vitali007tut.github.io/investera](https://vitali007tut.github.io/investera/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Задача
 
-## Expanding the ESLint configuration
+Реализовать адаптивный блок **«Структура акционеров»** с:
+- Таблицей акционеров (на основе **Ant Design**)
+- Круговой диаграммой (с использованием **Recharts**)
+- Отображением актуальной даты обновления
+- Фейковым API-запросом через `axios` (данные из `data.json`)
+- Обработкой данных: удаление дубликатов, нормализация к 100%
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> Макет Figma:  
+> 🔗 [Figma — Структура акционеров](https://www.figma.com/design/PLPHyPn9sfd0ynioRSLc93/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5?node-id=1-915&t=fpUlzttWzyMxAfdE-0)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Технологии
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React 19** — современные хуки и компонентная архитектура
+- **TypeScript** — строгая типизация
+- **Vite** — быстрая сборка и разработка
+- **SCSS** — модульные стили с переменными и миксинами
+- **Ant Design** — стилизованная таблица (`Table`)
+- **Recharts** — интерактивная круговая диаграмма
+- **Axios** — симуляция API-запроса
+- **GitHub Pages** — деплой
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📱 Адаптивность
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Компонент корректно отображается на всех устройствах:
+
+| Устройство       | Разрешение     | Особенности |
+|------------------|----------------|------------|
+| **Десктоп**      | ≥1024px        | Две колонки: таблица + график |
+| **Планшет**      | 768px – 1023px | Центрирование, уменьшение отступов |
+| **Мобильные**    | <768px         | Вертикальная структура, упрощённые легенды, адаптивный шрифт |
+
+---
+
+## 📥 Данные
+
+- Данные загружаются из `data.json` через `axios.get()` (фиктивный запрос)
+- Повторяющиеся акционеры объединяются
+- Проценты нормализуются так, чтобы сумма была **ровно 100%**
+- Дата под таблицей — **текущая** (формат: `DD.MM.YYYY`)
